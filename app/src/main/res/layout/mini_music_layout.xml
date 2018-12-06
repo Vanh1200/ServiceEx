@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_10">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_song_mini"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:background="@drawable/ic_song"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_mini"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/text_current_duration"
+        app:layout_constraintRight_toLeftOf="@id/text_duration"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_current_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:text="@string/text_temp_time"
+        app:layout_constraintBottom_toTopOf="@id/text_title"
+        app:layout_constraintLeft_toRightOf="@id/circle_image_song_mini"
+        app:layout_constraintRight_toLeftOf="@id/seek_bar_mini"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_6"
+        android:text="@string/text_temp_time"
+        app:layout_constraintBottom_toBottomOf="@id/text_current_duration"
+        app:layout_constraintLeft_toRightOf="@id/seek_bar_mini"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_current_duration" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:text="@string/text_temp"
+        app:layout_constraintBottom_toTopOf="@id/image_prev"
+        app:layout_constraintLeft_toRightOf="@id/circle_image_song_mini"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/circle_image_song_mini" />
+
+    <ImageView
+        android:id="@+id/image_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:src="@drawable/ic_skip_previous_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/text_title"
+        app:layout_constraintRight_toLeftOf="@id/image_play_pause"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    <ImageView
+        android:id="@+id/image_play_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_prev"
+        app:layout_constraintLeft_toRightOf="@id/image_prev"
+        app:layout_constraintRight_toLeftOf="@id/image_next"
+        app:layout_constraintTop_toTopOf="@id/image_prev" />
+
+    <ImageView
+        android:id="@+id/image_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_skip_next_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_prev"
+        app:layout_constraintLeft_toRightOf="@id/image_play_pause"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_prev" />
+
+</android.support.constraint.ConstraintLayout>

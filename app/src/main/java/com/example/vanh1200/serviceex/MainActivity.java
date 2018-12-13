@@ -29,6 +29,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements SongAdapter.OnItemClicked,
@@ -235,6 +236,7 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.OnIte
 
     private void updateMiniPlayer(int position) {
         if (mViewMiniPlay.getVisibility() == View.GONE) {
+            mViewMiniPlay.setVisibility(View.VISIBLE);
             mViewMiniPlay.startAnimation(getTranlateAnimation());
         }
 
